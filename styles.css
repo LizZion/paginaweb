@@ -1,0 +1,141 @@
+/* Padrões normais CSS */
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    font-family: fantasy;
+    overflow: hidden;
+    color: rgb(170, 254, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.flexBox {
+    display: flex;
+    overflow: scroll;
+    background-image: url(img/parallax.jpg);
+    background-size: cover;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content:flex-start;
+}
+
+[class^="item"]{
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* Fazer uma classe para cada tamanho, facilitando a adição de novos itens no futuro! */
+
+[class$="-1"]{
+    width: 12.5%;
+    height: 12.5%;
+}
+
+[class$="-2"]{
+    width: 25%;
+    height: 25%;
+}
+
+[class$="-3"]{
+    width: 37.5%;
+    height: 37.5%;
+}
+
+[class$="-4"]{
+    width: 50%;
+    height: 50%;
+}
+
+[class$="-5"]{
+    width: 62.5%;
+    height: 62.5%;
+}
+
+[class$="-6"]{
+    width: 75%;
+    height: 75%;
+}
+
+[class$="-7"]{
+    width: 87.5%;
+    height: 87.5%;
+}
+
+[class$="-8"]{
+    width: 100%;
+    height: 100%;
+}
+
+/* fim dos tamanhos customizados */
+
+[class*="img"]{
+    border-radius: 1000%;
+    width: 20vh;
+}
+
+[class*="flexBoxMini"] {
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+    height: 80vh;
+    border-radius: 5%;
+}
+
+[class*="text"] {
+    width: 50%;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.353);
+    border-radius: 2vw;
+}
+
+/* mudar barra de scroll */
+
+/* tamanho */
+::-webkit-scrollbar {
+    width: 1vw;
+  }
+   
+  /* aonde puxa */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(53, 154, 255); 
+    border-radius: 10px;
+  }
+  
+  /* aonde puxa - HOVER */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00000050; 
+  }
+
+h1{
+    background-color: rgba(0, 0, 0, 0.423);
+    outline-style: outset;
+    outline-width: 0.2vw;
+}
+
+a {
+    color: white;
+}
+
+/* adaptação para smartphones */
+
+@media (max-width: 479px) {
+
+    .flexBox{
+        overflow: scroll;
+    }
+
+    [class*="text"] {
+        overflow:visible;
+        width: 100%;
+        text-align: start;
+        font-size: 1rem;
+        height:fit-content;
+    }
+}
