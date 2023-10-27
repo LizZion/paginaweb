@@ -14,7 +14,7 @@ body{
 .flexBox {
     display: flex;
     overflow: scroll;
-    background-image: url(img/parallax.jpg);
+    background-image: url(img/parallax.gif);
     background-size: cover;
     align-items: center;
     flex-direction: column;
@@ -95,6 +95,10 @@ body{
     border-radius: 2vw;
 }
 
+.txt {
+    margin: 1vw;
+}
+
 /* mudar barra de scroll */
 
 /* tamanho */
@@ -133,9 +137,24 @@ a {
 
     [class*="text"] {
         overflow:visible;
-        width: 100%;
+        width: 90%;
         text-align: start;
-        font-size: 1rem;
         height:fit-content;
     }
+
+}
+
+/* interações */
+
+[class*="item"]:hover{
+    transform: scale(1.015);
+    filter: brightness(1.2);
+    outline-style: double;
+    outline-color: white;
+    outline-width: 0.5vw;
+    transition: 100ms linear;
+}
+
+[class*="title"] {
+    font-size: 2rem;
 }
